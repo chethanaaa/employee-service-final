@@ -5,18 +5,22 @@ pipeline {
         registryCredential = 'test' 
         dockerImage = '' 
     }
+    tools {
+        maven 'Maven 3.3.9'
+        //jdk 'jdk8'
+    }
     stages {
           
         stage ('Testing ') {
             steps {
                 script{
                   if (isUnix()){
-                //sh "mvn clean install"
+                sh "mvn clean install"
                       
                     sh 'mvn test'
                    }
                   else{
-                //bat "mvn clean install"
+                bat "mvn clean install"
                       
                         bat '.\\mvn test'
                     }
