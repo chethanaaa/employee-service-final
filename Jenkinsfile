@@ -13,12 +13,12 @@ pipeline {
                   if (isUnix()){
                 //sh "mvn clean install"
                       
-                    sh 'mvnw test'
+                    sh 'mvn test'
                    }
                   else{
                 //bat "mvn clean install"
                       
-                        bat '.\\mvnw test'
+                        bat '.\\mvn test'
                     }
                 }
             }
