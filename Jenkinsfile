@@ -26,11 +26,11 @@ pipeline {
                     }
                 }
             }
-            //post {
-                    //always {
-                        //junit '**/target/surefire-reports/TEST-*.xml'
-               // }
-          //  }
+            post {
+                    always {
+                        junit '**/target/surefire-reports/TEST-*.xml'
+                }
+            }
         }
         stage('Integration tests') {
           steps{
