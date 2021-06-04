@@ -9,7 +9,8 @@ pipeline {
         maven 'maven-3-6-3'
         //jdk 'jdk8'
     }
-    node{
+    node
+    {
         def mvn_version='3.6.3'
         withEnv(["PATH+MAVEN=${tool mvn_version}/bin"])
                  {
