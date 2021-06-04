@@ -11,7 +11,7 @@ pipeline {
     }
     node{
         def mvn_version='3.6.3'
-        withEnv(["PATH+MAVEN=${tool mvn_version}/bin])
+        withEnv(["PATH+MAVEN=${tool mvn_version}/bin"])
                  {
                      sh 'mvn clean package'
                  }
