@@ -6,12 +6,12 @@ pipeline {
         dockerImage = '' 
     }
     tools {
-        maven 'apache-maven-3.6.3'
+        maven 'maven-3-6-3'
         //jdk 'jdk8'
     }
     node
     {
-        def mvn_version='3.6.3'
+        def mvn_version='3-6-3'
         withEnv(["PATH+MAVEN=${tool mvn_version}/bin"])
                  {
                      sh 'mvn clean package'
