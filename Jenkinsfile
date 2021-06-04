@@ -9,6 +9,13 @@ pipeline {
         maven 'maven-3-6-3'
         //jdk 'jdk8'
     }
+    node{
+        def mvn_version='3.6.3'
+        withEnv(["PATH+MAVEN=${tool mvn_version}/bin])
+                 {
+                     sh 'mvn clean package'
+                 }
+                 }
     stages {
           
         stage ('Testing ') {
