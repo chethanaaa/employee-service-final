@@ -5,10 +5,10 @@ pipeline {
         registryCredential = 'test' 
         dockerImage = '' 
     }
-    //tools {
-        //maven 'maven-3-6-3'
+    tools {
+        maven 'maven-3-6-3'
         //jdk 'jdk8'
-    //}
+    }
     stages {
           
         stage ('Testing ') {
