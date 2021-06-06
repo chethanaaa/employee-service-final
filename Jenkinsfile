@@ -6,7 +6,7 @@ pipeline {
         dockerImage = '' 
     }
     tools {
-        maven 'maven-3_8_1'
+        maven 'maven_3_8_1'
         //jdk 'jdk8'
     }
   
